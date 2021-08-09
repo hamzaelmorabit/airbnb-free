@@ -42,22 +42,34 @@ export default function Header() {
         bg-red-400
           p-2
           md:mx-2
-
+cursor-pointer
           rounded-full 
         text-white"
         />
       </div>
 
-      <div className="flex">
-        <p>Become a host</p>
-        <HomeIcon className="h-10" />
+      <div className="flex justify-end space-x-5 items-center">
+        <p
+          className="hidden
+        md:inline-flex
+        text-gray-500"
+        >
+          Become a host
+        </p>
+        <GlobeAltIcon className="h-6 " />
         <div
-          className=" flex rounded-full
-        shadow-sm  border-2
+          className="flex rounded-full  space-x-2 
+      p-2
+         border-2
         "
         >
-          <SearchIcon className="h-10" />
-          <HomeIcon className="h-10" />
+          <MenuIcon
+            className="h-6 
+          cursor-pointer
+          "
+          />
+
+          <UserCircleIcon className="h-6   cursor-pointer  text-gray-500" />
         </div>
       </div>
     </header>

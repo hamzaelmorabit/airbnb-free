@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Banner from "../components/Banner";
 
-export default function Home() {
+export default function Home({ explore }) {
+  console.log(explore);
   return (
     <div>
       <Head>
@@ -10,7 +12,15 @@ export default function Home() {
       </Head>
 
       <Header />
-
+      <Banner />
     </div>
   );
+  export async function getServeSideProps() {
+    const explore = fetch("").then((res) => res.json());
+    return {
+      props: {
+        explore,
+      },
+    };
+  }
 }
