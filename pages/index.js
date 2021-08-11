@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import CardSmaller from "../components/CardSmaller";
 import CardMiddle from "../components/CardMiddle";
+import CardLarge from "../components/CardLarge";
+import Footer from "../components/Footer";
 
 export default function Home({ explore, exploreMiddle }) {
   console.log(exploreMiddle);
@@ -50,13 +52,22 @@ export default function Home({ explore, exploreMiddle }) {
 
         <section>
           <h1 className="py-8 font-semibold text-4xl">Live Anywhere</h1>
-          <div className="flex space-x-10 overflow-scroll scrollbar-hide ">
+          <div
+            className="flex space-x-10 overflow-scroll scrollbar-hide cursor-pointer
+          p-4
+          "
+          >
             {exploreMiddle?.map(({ img, title }, index) => (
               <CardMiddle key={index} img={img} title={title} />
             ))}
           </div>
         </section>
+
+        <CardLarge />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
@@ -64,8 +75,8 @@ export async function getServerSideProps() {
   const explore = await fetch("https://links.papareact.com/pyp").then((res) =>
     res.json()
   );
-  const exploreMiddle = await fetch("https://links.papareact.com/zp1").then((res) =>
-    res.json()
+  const exploreMiddle = await fetch("https://links.papareact.com/zp1").then(
+    (res) => res.json()
   );
   return {
     props: {
