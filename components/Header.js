@@ -21,7 +21,7 @@ export default function Header() {
       >
         <Image
           layout="fill"
-          src="https://links.papareact.com/qd3"
+          src="/../public/logo.PNG"
           objectFit="contain"
           objectPosition="left"
         />
@@ -42,7 +42,7 @@ export default function Header() {
         bg-red-400
           p-2
           md:mx-2
-cursor-pointer
+          cursor-pointer
           rounded-full 
         text-white"
         />

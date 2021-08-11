@@ -1,11 +1,5 @@
-
 module.exports = {
   images: {
-    domains: ["links.papareact.com"],
+    domains: ["image.tmdb.org","links.papareact.com"],
   },
-  //   variants: {
-  //     extend: {
-  //       animation: ["group-hover"],
-  //     },
-  //   },
 };
