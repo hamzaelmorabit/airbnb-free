@@ -1,5 +1,6 @@
 import Image from "next/image";
 export default function CardSmaller({ img, distance, location }) {
+ 
   return (
     <div
       className="flex items-center
@@ -14,8 +15,11 @@ export default function CardSmaller({ img, distance, location }) {
       space-x-4
      mt-5"
     >
+      {" "}
+
       <div className="relative h-16  w-16">
-        <Image className="rounded-md" src="/../public/small.PNG" layout="fill" />
+        {/*    //"/../public/small.PNG" */}
+        <Image className="rounded-md" src={img} layout="fill" />
       </div>
       <div className="ml-5">
         <p>{location}</p>

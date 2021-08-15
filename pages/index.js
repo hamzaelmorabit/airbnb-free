@@ -71,7 +71,7 @@ export default function Home({ explore, exploreMiddle }) {
     </div>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const explore = await fetch("https://links.papareact.com/pyp").then((res) =>
     res.json()
   );
